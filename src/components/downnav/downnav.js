@@ -1,7 +1,14 @@
+import { Cairo } from 'next/font/google'
+ 
+const cairo = Cairo({
+  subsets: ['latin'],
+  display: 'swap',
+  variable:'--font-cario'
+})
 
 function downnav() {
   return (
-    <div className="w-full bg-slate-800 py-10   text-white">
+    <div className={`${cairo.className} w-full bg-slate-800 py-10   text-white`}>
     <div className="w-full containerr grid grid-cols-3">
       <div className=" col-span-2  flex flex-col gap-5 items-end mr-20 text-right">
         <h1>تواصل معنا</h1>

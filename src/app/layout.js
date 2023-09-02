@@ -2,9 +2,8 @@ import './globals.css'
 import Header from '@/components/header/head'
 import Footer from '@/components/footer/foot'
 import Dnav from '@/components/downnav/downnav'
-import { Inter,Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
 const poppins = Poppins({subsets:['latin'],weight:['400'],variable:'--font-poppins'})
 
 export const metadata = {

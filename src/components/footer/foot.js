@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function foot() {
   return (
     <footer className="container-fluid text-white bg-[#201F33] flex justify-center items-center w-full py-4 font-medium">

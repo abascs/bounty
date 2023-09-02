@@ -11,6 +11,9 @@ module.exports = {
         },{
           protocol: 'https',
           hostname: 'i.dummyjson.com',
+        },{
+          protocol: 'https',
+          hostname: 'static.independent.co.uk',
         }
       ],
     },

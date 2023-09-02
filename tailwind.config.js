@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['var(--font-poppins)'],
+        Cario:['var(--font-Cario)']
       },
     },
   },
