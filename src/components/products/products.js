@@ -1,5 +1,5 @@
 import Product from "../product/product";
-import data from '@/app/data/data.json'
+import data from '../../app/data/data.json'
 
 
 export default async function products() {

@@ -7,6 +7,7 @@ const cairo = Cairo({
 })
 
 function downnav() {
+
   return (
     <div className={`${cairo.className} w-full bg-slate-800 py-10   text-white`}>
     <div className="w-full containerr grid grid-cols-3">
