@@ -1,6 +1,6 @@
 import Image from "next/image"
-import product from '../app/data/data.json'
-import Product from '../components/minep/minep'
+import product from '../data/data'
+import Product from '../../components/minep/minep'
 import { Cairo,Poppins } from 'next/font/google'
 const poppins = Poppins({subsets:['latin'],weight:['400'],variable:'--font-poppins'})
 
