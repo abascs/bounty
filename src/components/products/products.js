@@ -10,7 +10,7 @@ export default async function products() {
           shopping from best markets in iraq :-
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2  lg:grid-cols-3">
+      <div className="flex flex-wrap gap-10">
         {
           data.products.map((i)=>{
             return <Product key={i.id} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>

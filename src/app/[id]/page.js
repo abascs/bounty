@@ -1,6 +1,6 @@
 import Image from "next/image"
-import product from '../data/data'
-import Product from '../../components/minep/minep'
+import product from '@/app/data/data.json'
+import Miniproduct from "@/components/miniproduct/miniproduct"
 import { Cairo,Poppins } from 'next/font/google'
 const poppins = Poppins({subsets:['latin'],weight:['400'],variable:'--font-poppins'})
 
@@ -41,11 +41,11 @@ export default function page({params}) {
 
         <div className="mt-8">
             <h2 className="text-xl font-semibold mb-2">منتجات ذات علاقة</h2>
-            <div className="flex overflow-x-auto gap-4 snap-x scroll-mx-10">
+            <div className="flex items-end overflow-x-auto gap-4 snap-x scroll-mx-10">
               {
                 product.products.map((i)=>{
                   return(
-                    <Product key={i.id} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
+                    <Miniproduct key={i.id} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
                   )
                 })
               }
