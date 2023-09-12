@@ -45,7 +45,7 @@ export default function page({params}) {
               {
                 product.products.map((i)=>{
                   return(
-                    <Miniproduct key={i.id} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
+                    <Miniproduct key={i.id} rating={i.rating} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
                   )
                 })
               }

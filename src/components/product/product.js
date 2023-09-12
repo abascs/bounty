@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import Ratting from "../ratting/ratting"
 function product(props) {
   return (
     <div className="relative flex w-64 mx-auto flex-col h-min rounded-xl bg-slate-200 bg-clip-border text-gray-700 shadow-md">
@@ -13,11 +14,7 @@ function product(props) {
     
   </div>
   <div className="px-6 py-1 flex gap-1">
-  <i className="bi bi-star-fill  text-yellow-600"></i>
-  <i className="bi bi-star-fill  text-yellow-600"></i>
-  <i className="bi bi-star-fill  text-yellow-600"></i>
-  <i className="bi bi-star-fill  text-yellow-600"></i>
-  <i className="bi bi-star-fill  text-yellow-600"></i>
+  <Ratting rating={props.rating}/>
   <p>(300 view)</p>
   </div>
   <div className="p-6 pt-0">

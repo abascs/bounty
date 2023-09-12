@@ -13,7 +13,7 @@ export default async function products() {
       <div className="flex flex-wrap gap-10">
         {
           data.products.map((i)=>{
-            return <Product key={i.id} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
+            return <Product key={i.id} rating={i.rating} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
           })
         }
       </div>
