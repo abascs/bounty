@@ -1,4 +1,5 @@
 'use client'
+import { List } from 'postcss/lib/list';
 import { useState } from 'react';
 import Link from "next/link"
 
@@ -12,7 +13,7 @@ function header() {
   return (
     <div className="w-full top-0  z-10  bg-[#0CAA7D] text-white ">
     <div className="containerr flex justify-between items-center ">
-      <button onClick={toggleClassName}  id="menubtn" className="bg-blue-600 px-4 py-2 cursor-pointer rounded-full block md:hidden">Menu</button>
+    <i onClick={toggleClassName}  id="menubtn" className="bi bi-list text-5xl text-white cursor-pointer rounded-full block md:hidden"></i>
       <div className="w-full top-0 hidden md:block">
         <ul className="list-none  items-center  flex">
           <li className="pr-10 m-0 py-4 cursor-pointer"><Link href={'/'}>Home</Link></li>
@@ -24,7 +25,7 @@ function header() {
       </div>
       <div className="flex items-center gap-4 h-[56px]">
         <p className="cursor-pointer"><Link href={'./login'}>login</Link></p>
-        <i className="fa-solid fa-magnifying-glass text-white"></i>
+        <Link href={'/Card'}><i className="bi bi-cart-check-fill text-2xl"></i></Link>
       </div>
     </div>
     <div className={isActive ? 'top-14' : '-top-64 absolute'}>
@@ -38,6 +39,7 @@ function header() {
       </ul>
     </div>
     </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"></link>
   </div>
   
   )
