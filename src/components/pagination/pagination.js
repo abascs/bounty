@@ -11,7 +11,7 @@ function pagination({data}) {
   const finishIndex =currentPage*PRUDUCT_PER_PAGE;
   const prud=data.slice(startIndex,finishIndex);
   let generatepages=[];
-  for (let i = 1; i < pages; i++) {
+  for (let i = 1; i <= pages; i++) {
     generatepages.push(i)
     
   }
