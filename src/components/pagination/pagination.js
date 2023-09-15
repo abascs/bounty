@@ -4,7 +4,7 @@ import Product from "../product/product";
 import React, { useState } from 'react'
 
 function pagination({data}) {
-  const [currentPage,setCurrentPage]=useState(3);
+  const [currentPage,setCurrentPage]=useState(1);
   const PRUDUCT_PER_PAGE=6;
   const pages=Math.ceil(data.length/PRUDUCT_PER_PAGE);
   const startIndex=(currentPage-1)*PRUDUCT_PER_PAGE;
