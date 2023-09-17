@@ -1,6 +1,6 @@
 
 import Mainnav from '../components/nav/nav'
-import Products from '../components/products/products'
+import Prodslider from '@/components/prodslider/prodslider'
 import Pagination from '@/components/pagination/pagination'
 import Services from '../components/services/services'
 import Sendm from '../components/sendm/sendm'
@@ -10,6 +10,8 @@ export default function Background() {
   return (
     <div className=' bg-slate-100'>
       <Mainnav/>
+      <Prodslider data={data.products}/>
+      <Prodslider data={data.products}/>
       <Pagination data={data.products}/>
       <Services/>
       <Sendm/>

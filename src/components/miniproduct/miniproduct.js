@@ -5,7 +5,7 @@ import Ratting from '../ratting/ratting'
 
 function miniproduct(props) {
   return (
-    <div className="relative flex w-44 mx-auto my-6 flex-col h-min rounded-xl bg-slate-50 bg-clip-border text-gray-700 shadow-md">
+    <div className="relative snap-center flex w-44 mx-auto my-6 flex-col h-min rounded-xl bg-slate-50 bg-clip-border text-gray-700 shadow-md">
   <div className="relative aspect-square w-32 mx-auto -mt-6  overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-[#0CAA7D]">
   <Image fill className="object-fill border rounded-xl border-[#0CAA7D] " src={props.thumbnail} alt=""/>
   </div>
