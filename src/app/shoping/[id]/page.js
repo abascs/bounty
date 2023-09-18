@@ -1,5 +1,5 @@
 import Image from "next/image"
-import product from '@/app/data/data.json'
+import data from '@/app/data/data.json'
 import Miniproduct from "@/components/miniproduct/miniproduct"
 import { Cairo,Poppins } from 'next/font/google'
 const poppins = Poppins({subsets:['latin'],weight:['400'],variable:'--font-poppins'})
@@ -9,9 +9,8 @@ const cairo = Cairo({
   display: 'swap',
   variable:'--font-cario'
 })
-
 export default function page({params}) {
-  let img=product.products[params.id -1]
+   let img=data[params.id -1];
   return (
     <main dir="rtl" className={`${cairo.className} containerr text-right bg-slate-200 mx-auto my-8 p-4`}>
         <div className="grid relative grid-cols-1 md:grid-cols-3 gap-4">
@@ -43,7 +42,7 @@ export default function page({params}) {
             <h2 className="text-xl font-semibold mb-2">منتجات ذات علاقة</h2>
             <div className="flex items-end overflow-x-auto gap-4 snap-x scroll-mx-10">
               {
-                product.products.map((i)=>{
+                data.filter(i=>i.category===img.category).map((i)=>{
                   return(
                     <Miniproduct key={i.id} rating={i.rating} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>
                   )

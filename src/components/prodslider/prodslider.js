@@ -22,7 +22,7 @@ function prodslider({data,header}) {
     <div id='scroll' className='snap-x w-full  flex flex-row-reverse gap-6 overflow-x-scroll'>
         {
             data.map((i)=>{
-                return(<Miniproduct key={i.id} rating={i.rating.rate} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>)
+                return(<Miniproduct key={i.id} rating={i.rating} number={i.id} title={i.title} description={i.description} price={i.price} thumbnail={i.thumbnail}/>)
             })
         }
     </div>

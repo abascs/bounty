@@ -20,7 +20,7 @@ function miniproduct(props) {
   </div>
   <div className="px-6 pb-3 pt-0">
     <button data-ripple-light="true" type="button" className="select-none whitespace-nowrap rounded-lg bg-[#0CAA7D] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-      <Link href={`/${props.number}`}>Read More</Link>
+      <Link href={`/shoping/${props.number}`}>Read More</Link>
     </button>
   </div>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></link>
