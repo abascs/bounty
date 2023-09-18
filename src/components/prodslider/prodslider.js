@@ -1,7 +1,11 @@
-
-import Script from 'next/script'
+import { Cairo } from 'next/font/google'
+ 
+const cairo = Cairo({
+  subsets: ['latin'],
+  display: 'swap',
+  variable:'--font-Cairo'
+})
 import Miniproduct from '../miniproduct/miniproduct'
-import './prodslider.modul.css'
 
 
 import React from 'react'
@@ -9,9 +13,11 @@ import React from 'react'
 function prodslider({data}) {
   return (
     <div className='containerr mt-6 relative w-full flex flex-col gap-10'>
-    <div className='w-full px-8 flex justify-between items-center'>
-    <p className='text-blue-500 cursor-pointer'>...المزيد</p>
-    <h1 id='title' className='text-right relative text-4xl'>منتجات منزليه</h1>
+    <div className='w-full px-8 '>
+    <div className="w-full flex relative justify-center items-center ">
+      <h1 className={`${cairo.className} z-10 text-4xl bg-slate-100 px-2 md:px-8`}>منتجات رقميه</h1>
+      <div className="absolute w-full h-1 top-6 bg-blue-500"></div>
+    </div>  
     </div>
     <div id='scroll' className='snap-x w-full  flex flex-row-reverse gap-6 overflow-x-scroll'>
         {

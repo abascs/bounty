@@ -1,9 +1,0 @@
-#title::before{
-content: "";
-position: absolute;
-top: 50px;
-width: 100px;
-height: 5px;
-background-color: blue;
-}
-
