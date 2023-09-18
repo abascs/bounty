@@ -18,6 +18,10 @@ module.exports = {
           protocol: 'https',
           hostname: 'static.independent.co.uk',
         }
+        ,{
+          protocol: 'https',
+          hostname: 'fakestoreapi.com',
+        }
       ],
     },
   }
