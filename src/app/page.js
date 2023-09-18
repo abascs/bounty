@@ -12,7 +12,6 @@ export default function Background() {
       <Mainnav/>
       <Prodslider data={data.products}/>
       <Prodslider data={data.products}/>
-      <Pagination data={data.products}/>
       <Services/>
       <Sendm/>
       

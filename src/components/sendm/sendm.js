@@ -20,13 +20,6 @@ export default function sendm() {
     setpnumber(event.target.value);
   };
   async function send(){
-    //   let data={
-    //   name:name,
-    //   password:password,
-    //   Pnumber:Pnumber,
-    //   Message:Message
-    // }
-    // console.log(data)
     const header = {
       'Content-Type': 'application/json',
     };
@@ -45,10 +38,10 @@ export default function sendm() {
         <div className="bg-[#0CAA7D] flex justify-center items-center py-10">
             <form action={send} className="form flex items-center flex-col gap-7 w-full">
             <h1 className="text-4xl font-bold text-white">Sign Up</h1>
-                <input onChange={handelname} type="text" className="w-9/12 h-10 rounded-3xl" placeholder="     Name"/>
-                <input onChange={handelpassword} type="text" className="w-9/12 h-10 rounded-3xl" placeholder="     Password"/> 
-                <input onChange={handelpnumber} type="text" className="w-9/12 h-10 rounded-3xl" placeholder="     Phone number"/> 
-                <input onChange={handelmessage} type="text" className="w-9/12 h-10 rounded-3xl" placeholder="     Message"/> 
+                <input onChange={handelname} type="text" className="w-9/12 h-10 rounded-3xl indent-10 focus:border-none focus:outline-none" placeholder="Name"/>
+                <input onChange={handelpassword} type="text" className="w-9/12 h-10 rounded-3xl indent-10 focus:border-none focus:outline-none" placeholder="Password"/> 
+                <input onChange={handelpnumber} type="text" className="w-9/12 h-10 rounded-3xl indent-10 focus:border-none focus:outline-none" placeholder="Phone number"/> 
+                <input onChange={handelmessage} type="text" className="w-9/12 h-10 rounded-3xl indent-10 focus:border-none focus:outline-none" placeholder="Message"/> 
                 <button className="bg-[red] px-6 py-2 rounded-full text-white text-xl font-bold tracking-widest">send</button>
             </form>
         </div>
