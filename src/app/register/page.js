@@ -1,14 +1,41 @@
+'use client'
 import style from './sendm.module.css'
 import Link from 'next/link'
+import { useState } from 'react'
 export default function login() {
+  let [Name,setname]=useState('')
+  let [Email,setEmail]=useState('')
+  let [Password,setPassword]=useState('')
+  const handelname = (event) => {
+    setname(event.target.value);
+  };
+  const handelEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handelPassword = (event) => {
+    setPassword(event.target.value);
+  };
+  async function send(){
+    const header = {
+      'Content-Type': 'application/json',
+    };
+    let a=await fetch('/API/signUp',{
+      method:"POST",
+      headers:header,
+      body:JSON.stringify({
+        Name,Email,Password
+      })
+    })
+    console.log(a)
+  }
   return (
-    <div className=" bg-slate-100 w-full h-screen flex justify-center items-center">
-      <form className={style.form}>
+    <div  className=" bg-slate-100 w-full h-screen flex justify-center items-center">
+      <form action={send} className={style.form}>
     <div className={style.header}>Sign up</div>
     <div className={style.inputs}>
-        <input placeholder="Name" className={style.input} type="text"/>
-        <input placeholder="Email" className={style.input} type="text"/>
-        <input placeholder="Password" className={style.input} type="password"/>
+        <input onChange={handelname} placeholder="Name" className={style.input} type="text"/>
+        <input onChange={handelEmail} placeholder="Email" className={style.input} type="text"/>
+        <input onChange={handelPassword} placeholder="Password" className={style.input} type="password"/>
     <div className={style.checkboxcontainer}>
         <label className={style.checkbox}>
         <input type="checkbox" id="checkbox"/>
